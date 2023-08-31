@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 3</title>
+</head>
+<body>
+
+<h1>MyWebsites</h1>
+
+<ul>
+    <li><a href="https://www.google.com">Google</a></li>
+    <li><a href="https://www.youtube.com">YouTube</a></li>
+    <li><a href="https://www.facebook.com">Facebook</a></li>
+    <li><a href="https://www.amazon.com">Amazon</a></li>
+    <li><a href="https://www.wikipedia.org">Wikipedia</a></li>
+</ul>
+
+</body>
+</html>
