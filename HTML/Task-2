@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task 2</title>
+</head>
+<body>
+
+<h1>MyList</h1>
+
+<ul>
+    <li>Wake Up</li>
+    <ul>
+        <li>Workout</li>
+        <li>Meditate</li>
+        <li>Breakfast</li>
+    </ul>
+    <li>Study</li>
+    <ul>
+        <li>WebDev</li>
+        <li>DSA</li>
+        <li>AWS</li>
+    </ul>
+</ul>
+
+</body>
+</html>
