@@ -1,1 +1,109 @@
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hover Cards</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .page-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .sub-title {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .card {
+        width: 300px;
+        height: 200px;
+        max-height: fit-content;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        margin: 20px;
+      }
+
+      .card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-content {
+        padding: 20px;
+      }
+
+      .card-content h2 {
+        margin-top: 0;
+      }
+
+      .links {
+        display: none;
+      }
+
+      .card:hover .links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+      }
+
+      .links a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="page-title">Pranay Parikh's Tasks</h1>
+    <h2 class="sub-title">Ethnus internship on MERN Stack</h2>
+
+    <div class="card-container">
+      <div class="card">
+        <div class="card-content">
+          <h2>HTML</h2>
+          <div class="links">
+            <a href="./HTML/Task-1.html">Task 1</a>
+            <a href="./HTML/Task-2.html">Task 2</a>
+            <a href="./HTML/Task-3.html">Task 3</a>
+            <a href="./HTML/Task-4.html">Task 4</a>
+            <a href="./HTML/Task-5.html">Task 5</a>
+            <a href="./HTML/Task-6.html">Task 6</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <h2>CSS</h2>
+          <div class="links">
+            <a href="./CSS/Task-1-1.html">Task 1.1</a>
+            <a href="./CSS/Task-1-2.html">Task 1.2</a>
+            <a href="./CSS/Task-2-1.html">Task 2.1</a>
+            <a href="./CSS/Task-1-2.html">Task 2.2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
