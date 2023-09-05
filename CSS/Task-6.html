@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .login-container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+      }
+
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .login-form {
+        text-align: center;
+      }
+
+      .login-form h2 {
+        margin-bottom: 20px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+
+      input[type="checkbox"] {
+        margin-right: 5px;
+      }
+
+      button.login-button {
+        background-color: #4caf50; /* Green color for Login button */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button.cancel-button {
+        background-color: #ff0000; /* Red color for Cancel button */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      a.forgot-password {
+        text-decoration: none;
+        color: #0000ff; /* Blue color for Forgot Password link */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="profile-pic">
+        <img
+          src="https://e1.pxfuel.com/desktop-wallpaper/508/931/desktop-wallpaper-129-about-default-icons-default-pfp.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+      <form class="login-form">
+        <h2>Login</h2>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label> <input type="checkbox" name="remember" /> Remember me </label>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="login-button">Login</button>
+          <button type="button" class="cancel-button">Cancel</button>
+        </div>
+        <div class="form-group">
+          <a href="#" class="forgot-password">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
