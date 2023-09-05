@@ -14,6 +14,10 @@
         margin: 0;
       }
 
+      .techname {
+        margin-left: 25%;
+      }
+
       .page-title {
         font-size: 24px;
         font-weight: bold;
@@ -22,7 +26,7 @@
 
       .sub-title {
         font-size: 18px;
-        color: #555;
+        color: #fff;
         margin-bottom: 30px;
       }
 
@@ -32,7 +36,7 @@
       }
 
       .card {
-        height: 350px;
+        height: 300px;
         width: 200px;
         /* max-height: max-content;
         max-width: max-content; */
@@ -40,7 +44,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         overflow: hidden;
-        transition: transform 4s ease;
+        transition: transform 2s ease;
         margin: 20px;
       }
 
@@ -81,16 +85,62 @@
         margin-bottom: 10px;
         transform: scale(1.28);
       }
+
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: linear-gradient(to top, #9c44bf, #9e29d8, #a67de8);
+      }
+
+      .dots-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .dot {
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        animation: moveDots 5s linear infinite, fadeInOut 5s ease infinite;
+      }
+
+      @keyframes moveDots {
+        0% {
+          transform: translate(0, -1000);
+        }
+        100% {
+          transform: translate(calc(100vw - 60px), calc(100vh - 60px));
+        }
+      }
+
+      @keyframes fadeInOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="dots-container"></div>
     <h1 class="page-title">Pranay Parikh's Tasks</h1>
     <h2 class="sub-title">Ethnus internship on MERN Stack</h2>
 
     <div class="card-container">
       <div class="card">
         <div class="card-content">
-          <h2>HTML</h2>
+          <h2 class="techname">HTML</h2>
           <div class="links">
             <a href="./HTML/Task-1.html">Task 1</a>
             <a href="./HTML/Task-2.html">Task 2</a>
@@ -103,7 +153,7 @@
 
       <div class="card">
         <div class="card-content">
-          <h2>CSS</h2>
+          <h2 class="techname">CSS</h2>
           <div class="links">
             <a href="./CSS/Task-1-1.html">Task 1.1</a>
             <a href="./CSS/Task-1-2.html">Task 1.2</a>
@@ -118,5 +168,28 @@
         </div>
       </div>
     </div>
+
+    <script>
+      // JavaScript code to continuously generate and move random dots
+      const dotsContainer = document.querySelector(".dots-container");
+      const numDots = 1000; // Adjust the number of dots as needed
+
+      function createRandomDot() {
+        const dot = document.createElement("div");
+        dot.classList.add("dot");
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${Math.random() * 100}%`;
+        dot.style.animationDuration = `${Math.random() * 5 + 2}s`; // Random animation duration
+        dotsContainer.appendChild(dot);
+
+        dot.addEventListener("animationiteration", () => {
+          dot.style.left = `${Math.random() * 100}%`;
+          dot.style.top = `${Math.random() * 100}%`;
+          dot.style.animationDuration = `${Math.random() * 5 + 2}s`;
+        });
+      }
+
+      setInterval(createRandomDot, 50); // Generate a dot every 200 milliseconds
+    </script>
   </body>
 </html>
