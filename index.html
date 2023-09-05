@@ -112,10 +112,10 @@
 
       @keyframes moveDots {
         0% {
-          transform: translate(0, -1000);
+          transform: translate(-6px, -6px); /* Adjust for dot size */
         }
         100% {
-          transform: translate(calc(100vw - 60px), calc(100vh - 60px));
+          transform: translate(calc(100vw - 6px), calc(100vh - 6px));
         }
       }
 
@@ -133,7 +133,10 @@
     </style>
   </head>
   <body>
-    <div class="dots-container"></div>
+    <div
+      class="dots-container"
+      style="transform: translate(-50px, -50px)"
+    ></div>
     <h1 class="page-title">Pranay Parikh's Tasks</h1>
     <h2 class="sub-title">Ethnus internship on MERN Stack</h2>
 
@@ -172,7 +175,7 @@
     <script>
       // JavaScript code to continuously generate and move random dots
       const dotsContainer = document.querySelector(".dots-container");
-      const numDots = 1000; // Adjust the number of dots as needed
+      const numDots = 100; // Adjust the number of dots as needed
 
       function createRandomDot() {
         const dot = document.createElement("div");
@@ -189,7 +192,7 @@
         });
       }
 
-      setInterval(createRandomDot, 50); // Generate a dot every 200 milliseconds
+      setInterval(createRandomDot, 500); // Generate a dot every 200 milliseconds
     </script>
   </body>
 </html>
