@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Table with Header and Alternating Rows</title>
+    <style>
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: 10% auto;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      th {
+        background-color: rgb(97, 219, 97);
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #eee; /* Light grey */
+      }
+
+      tr:nth-child(odd) {
+        background-color: #bbb; /* Dark grey */
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>SubScript</td>
+          <td>Pranay Parikh</td>
+          <td>India</td>
+        </tr>
+        <tr>
+          <td>Island Trading</td>
+          <td>Jane Smith</td>
+          <td>Canada</td>
+        </tr>
+        <tr>
+          <td>Berglunds snabbkop</td>
+          <td>Michael Johnson</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Garcia</td>
+          <td>Spain</td>
+        </tr>
+        <tr>
+          <td>Koniglich Essen</td>
+          <td>Andrea Müller</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>Winecellars</td>
+          <td>Luca Rossi</td>
+          <td>Italy</td>
+        </tr>
+        <tr>
+          <td>Laughing Bacchus</td>
+          <td>Masahiro Tanaka</td>
+          <td>Japan</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
